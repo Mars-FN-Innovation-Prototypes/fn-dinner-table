@@ -1,0 +1,86 @@
+:root {
+  /* Mars Food & Nutrition Official Primary Colors */
+  --color-pea: #62BB46;
+  --color-pea-rgb: 98, 187, 70;
+  
+  --color-mid-green: #008D39;
+  --color-mid-green-rgb: 0, 141, 57;
+  
+  --color-water: #19738D;
+  --color-water-rgb: 25, 115, 141;
+  
+  --color-mars-blue: #0000A0;
+  --color-mars-blue-rgb: 0, 0, 160;
+  
+  --color-white: #FFFFFF;
+
+  /* Legacy Name Mapping for backward compatibility */
+  --color-navy: var(--color-mars-blue);
+  --color-navy-rgb: 0, 0, 160;
+  --color-green: var(--color-pea);
+  --color-green-rgb: var(--color-pea-rgb);
+  --color-teal: var(--color-water);
+  --color-purple: var(--color-eggplant);
+  --color-yellow: var(--color-corn);
+
+  /* Official Secondary Colors */
+  --color-salt: #E2E4E6;
+  --color-rice: #FFF3E8;
+  --color-lime: #B4CE00;
+  --color-orange: #EB6916;
+  --color-lentil: #00634D;
+  --color-corn: #FFD131;
+  --color-kraft-paper: #BE8C50;
+  --color-deep-water: #003D50;
+  --color-sweet-potato: #FF8E18;
+  --color-spicy-red: #E51B23;
+  --color-red-onion: #EB5F87;
+  --color-berry: #BA5664;
+  --color-eggplant: #8C3C68;
+  --color-ice: #A0D1CA;
+  --color-earth: #704100;
+  --color-charcoal: #3C3C3C;
+
+  /* UI Theming Tokens */
+  --color-bg-base: var(--color-rice); /* Rice background brings the food world to life! */
+  --color-bg-card: var(--color-white);
+  --color-text-primary: var(--color-charcoal);
+  --color-text-secondary: var(--color-deep-water);
+  --color-text-muted: #718096;
+  --color-border: var(--color-salt);
+  --color-border-dark: var(--color-mars-blue); /* Strong illustration borders use Mars Blue */
+
+  --color-success: var(--color-lentil);
+  --color-warning: var(--color-orange);
+  --color-danger: var(--color-spicy-red);
+  --color-info: var(--color-water);
+
+  /* Typography Fallbacks */
+  --font-family: 'Mars Centra', 'Outfit', Arial, sans-serif;
+
+  /* Standard Shadows & Borders */
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+
+  /* Bold Illustrative Style (flat neo-brutalist) */
+  --border-thick: 3px solid var(--color-border-dark);
+  --border-thin: 1px solid var(--color-border);
+  --shadow-flat: 4px 4px 0px 0px var(--color-mars-blue);
+  --shadow-flat-hover: 6px 6px 0px 0px var(--color-mars-blue);
+
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark mode theme variables */
+[data-theme="dark"] {
+  --color-bg-base: #0b0f19;
+  --color-bg-card: #151c2c;
+  --color-text-primary: #f7f9fc;
+  --color-text-secondary: #a0aec0;
+  --color-text-muted: #718096;
+  --color-border: #2d3748;
+  --color-border-dark: #f7f9fc;
+  --shadow-flat: 4px 4px 0px 0px var(--color-pea);
+  --shadow-flat-hover: 6px 6px 0px 0px var(--color-pea);
+}

@@ -46,13 +46,13 @@ export default function Slideshow({ onClose }) {
         return (
           <div style={{ textAlign: "center", padding: "40px 0" }}>
             <div style={{ display: "flex", justifyContent: "center", marginBottom: "24px" }}>
-              <img src={getAssetUrl("brand/logo-combined.png")} alt="Mars F&N Logo" style={{ height: "80px", objectFit: "contain" }} onError={(e) => { e.target.style.display = 'none'; }} />
+              <img src={getAssetUrl("brand/glue-crew-logo.png")} alt="The Glue Crew Logo" style={{ height: "120px", objectFit: "contain", borderRadius: "12px", border: "3px solid var(--color-border-dark)" }} />
             </div>
             <h1 style={{ fontSize: "52px", color: "var(--color-mars-blue)", fontFamily: "'Outfit', sans-serif", marginBottom: "16px" }}>
-              The Dinner Table
+              The Glue Crew
             </h1>
             <p style={{ color: "var(--color-pea)", fontSize: "20px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "2px", marginBottom: "40px" }}>
-              Food & Nutrition DT Team Monthly Meeting
+              Cooking Engagement Team Meeting
             </p>
             
             <div className="mars-card" style={{ maxWidth: "500px", margin: "0 auto", padding: "20px", border: "3px solid var(--color-mars-blue)" }}>

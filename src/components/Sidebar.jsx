@@ -16,10 +16,10 @@ export default function Sidebar({ activeTab, setActiveTab, isPresenterMode, setI
       <div>
         {/* Brand Lockup */}
         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "36px" }}>
-          <img src={getAssetUrl("brand/logo-lockup.png")} alt="Mars Logo" style={{ height: "32px", objectFit: "contain" }} onError={(e) => { e.target.style.display = 'none'; }} />
+          <img src={getAssetUrl("brand/glue-crew-logo.png")} alt="Glue Crew Logo" style={{ height: "42px", objectFit: "contain", borderRadius: "8px", border: "2px solid var(--color-border-dark)" }} />
           <div>
-            <h2 style={{ fontSize: "20px", color: "var(--color-mars-blue)" }}>Dinner Table</h2>
-            <p style={{ fontSize: "11px", color: "var(--color-pea)", fontWeight: 700, textTransform: "uppercase" }}>FN DT Team Portal</p>
+            <h2 style={{ fontSize: "18px", color: "var(--color-mars-blue)" }}>The Glue Crew</h2>
+            <p style={{ fontSize: "10px", color: "var(--color-pea)", fontWeight: 700, textTransform: "uppercase" }}>Cooking Engagement</p>
           </div>
         </div>
 

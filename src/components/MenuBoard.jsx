@@ -3,7 +3,7 @@ import { useDinnerTable } from "../context/DinnerTableContext";
 import { MessageSquare, AlertTriangle, PlayCircle, ExternalLink, Clipboard, Check } from "lucide-react";
 
 export default function MenuBoard() {
-  const { projects, team } = useDinnerTable();
+  const { projects, team, getAssetUrl } = useDinnerTable();
   const [copied, setCopied] = useState(false);
 
   // Find who has NOT submitted an update yet
@@ -88,7 +88,7 @@ export default function MenuBoard() {
                     )}
 
                     <div style={{ display: "flex", alignItems: "center", gap: "8px", borderTop: "1px solid var(--color-border)", paddingTop: "10px" }}>
-                      <img src={lead.avatar} alt={lead.name} style={{ width: "24px", height: "24px", borderRadius: "50%", border: "1px solid var(--color-mars-blue)" }} />
+                      <img src={getAssetUrl(lead.avatar)} alt={lead.name} style={{ width: "24px", height: "24px", borderRadius: "50%", border: "1px solid var(--color-mars-blue)" }} />
                       <span style={{ fontSize: "12px", fontWeight: 700, color: "var(--color-text-primary)" }}>{lead.name}</span>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function MenuBoard() {
                     </div>
 
                     <div style={{ display: "flex", alignItems: "center", gap: "8px", borderTop: "1px solid var(--color-border)", paddingTop: "10px" }}>
-                      <img src={lead.avatar} alt={lead.name} style={{ width: "24px", height: "24px", borderRadius: "50%", border: "1px solid var(--color-mars-blue)" }} />
+                      <img src={getAssetUrl(lead.avatar)} alt={lead.name} style={{ width: "24px", height: "24px", borderRadius: "50%", border: "1px solid var(--color-mars-blue)" }} />
                       <span style={{ fontSize: "12px", fontWeight: 700, color: "var(--color-text-primary)" }}>{lead.name}</span>
                     </div>
                   </div>
@@ -157,7 +157,7 @@ export default function MenuBoard() {
 
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid var(--color-border)", paddingTop: "10px" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                        <img src={lead.avatar} alt={lead.name} style={{ width: "24px", height: "24px", borderRadius: "50%", border: "1px solid var(--color-mars-blue)" }} />
+                        <img src={getAssetUrl(lead.avatar)} alt={lead.name} style={{ width: "24px", height: "24px", borderRadius: "50%", border: "1px solid var(--color-mars-blue)" }} />
                         <span style={{ fontSize: "12px", fontWeight: 700, color: "var(--color-text-primary)" }}>{lead.name}</span>
                       </div>
                       

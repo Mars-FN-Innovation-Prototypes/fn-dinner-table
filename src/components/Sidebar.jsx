@@ -3,7 +3,7 @@ import { Utensils, Award, Image, FileText, Play, Settings, RefreshCw } from "luc
 import { useDinnerTable } from "../context/DinnerTableContext";
 
 export default function Sidebar({ activeTab, setActiveTab, isPresenterMode, setIsPresenterMode }) {
-  const { resetToSeedData, clearMeetingData } = useDinnerTable();
+  const { resetToSeedData, getAssetUrl } = useDinnerTable();
 
   const handleReset = () => {
     if (window.confirm("Reset all project updates, nominations, and photos to mock data?")) {
@@ -16,7 +16,7 @@ export default function Sidebar({ activeTab, setActiveTab, isPresenterMode, setI
       <div>
         {/* Brand Lockup */}
         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "36px" }}>
-          <img src="/brand/logo-lockup.png" alt="Mars Logo" style={{ height: "32px", objectFit: "contain" }} onError={(e) => { e.target.style.display = 'none'; }} />
+          <img src={getAssetUrl("brand/logo-lockup.png")} alt="Mars Logo" style={{ height: "32px", objectFit: "contain" }} onError={(e) => { e.target.style.display = 'none'; }} />
           <div>
             <h2 style={{ fontSize: "20px", color: "var(--color-mars-blue)" }}>Dinner Table</h2>
             <p style={{ fontSize: "11px", color: "var(--color-pea)", fontWeight: 700, textTransform: "uppercase" }}>FN DT Team Portal</p>

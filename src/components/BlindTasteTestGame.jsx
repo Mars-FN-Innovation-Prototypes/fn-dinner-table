@@ -3,7 +3,7 @@ import { useDinnerTable } from "../context/DinnerTableContext";
 import { Image, HelpCircle, ArrowRight, CheckCircle, AlertTriangle } from "lucide-react";
 
 export default function BlindTasteTestGame() {
-  const { photos, team } = useDinnerTable();
+  const { photos, team, getAssetUrl } = useDinnerTable();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedGuess, setSelectedGuess] = useState(null); // id of choice clicked
   const [revealed, setRevealed] = useState(false);
@@ -125,7 +125,7 @@ export default function BlindTasteTestGame() {
           >
             {/* If revealed, show the real picture. If not, we show a blurred version or a placeholder question mark overlay */}
             <img 
-              src={activePhoto.imagePath} 
+              src={getAssetUrl(activePhoto.imagePath)} 
               alt="Mystery Clue" 
               style={{ 
                 width: "100%", 
@@ -208,7 +208,7 @@ export default function BlindTasteTestGame() {
           >
             <div style={{ display: "flex", gap: "16px", alignItems: "center", marginBottom: "16px" }}>
               <img 
-                src={owner.avatar} 
+                src={getAssetUrl(owner.avatar)} 
                 alt={owner.name} 
                 style={{ width: "64px", height: "64px", borderRadius: "50%", border: "2px solid var(--color-lentil)", objectFit: "cover" }} 
               />

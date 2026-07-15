@@ -3,7 +3,7 @@ import { useDinnerTable } from "../context/DinnerTableContext";
 import { Award, Heart } from "lucide-react";
 
 export default function GuestOfHonorReveal() {
-  const { nominations, team } = useDinnerTable();
+  const { nominations, team, getAssetUrl } = useDinnerTable();
   const [selectedNomineeId, setSelectedNomineeId] = useState("");
   const [isLifted, setIsLifted] = useState(false);
   const [confetti, setConfetti] = useState([]);
@@ -151,7 +151,7 @@ export default function GuestOfHonorReveal() {
           >
             <div style={{ position: "relative", display: "inline-block", marginBottom: "16px" }}>
               <img 
-                src={activeNomineeData.member.avatar} 
+                src={getAssetUrl(activeNomineeData.member.avatar)} 
                 alt={activeNomineeData.member.name} 
                 style={{ width: "120px", height: "120px", borderRadius: "50%", border: "4px solid var(--color-mars-blue)", objectFit: "cover" }} 
               />

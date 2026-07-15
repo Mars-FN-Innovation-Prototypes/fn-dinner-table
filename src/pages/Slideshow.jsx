@@ -3,8 +3,10 @@ import MenuBoard from "../components/MenuBoard";
 import BlindTasteTestGame from "../components/BlindTasteTestGame";
 import GuestOfHonorReveal from "../components/GuestOfHonorReveal";
 import { X, ChevronLeft, ChevronRight, Award, Utensils, Image as ImageIcon, Flame } from "lucide-react";
+import { useDinnerTable } from "../context/DinnerTableContext";
 
 export default function Slideshow({ onClose }) {
+  const { getAssetUrl } = useDinnerTable();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const totalSlides = 5;
@@ -44,7 +46,7 @@ export default function Slideshow({ onClose }) {
         return (
           <div style={{ textAlign: "center", padding: "40px 0" }}>
             <div style={{ display: "flex", justifyContent: "center", marginBottom: "24px" }}>
-              <img src="/brand/logo-combined.png" alt="Mars F&N Logo" style={{ height: "80px", objectFit: "contain" }} onError={(e) => { e.target.style.display = 'none'; }} />
+              <img src={getAssetUrl("brand/logo-combined.png")} alt="Mars F&N Logo" style={{ height: "80px", objectFit: "contain" }} onError={(e) => { e.target.style.display = 'none'; }} />
             </div>
             <h1 style={{ fontSize: "52px", color: "var(--color-mars-blue)", fontFamily: "'Outfit', sans-serif", marginBottom: "16px" }}>
               The Dinner Table
